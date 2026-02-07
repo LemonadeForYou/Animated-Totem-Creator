@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lemon Hub - Home</title>
+<title>Lemon Cord - Home</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,8 @@
 <style>
 :root{
 --dark-space:#0A0A10;
---deep-purple:#FACC15;        /* yellow */
---light-purple:#FDE047;       /* light yellow */
+--deep-purple:#FACC15;
+--light-purple:#FDE047;
 --glow-color:rgba(250,204,21,0.25);
 --border-color:rgba(250,204,21,0.35);
 --text-primary:#FFF7CC;
@@ -107,8 +107,6 @@ color:var(--text-secondary);
 line-height:1.6;
 }
 
-/* Page transition */
-
 .page-transition{
 position:fixed;
 top:0;
@@ -137,8 +135,6 @@ to{transform:scaleY(0);}
 from{transform:scaleY(0);}
 to{transform:scaleY(1);}
 }
-
-/* Social */
 
 .social-links{
 position:fixed;
@@ -178,20 +174,16 @@ transform:translateY(-5px);
 
 <div class="container">
 <header class="header">
-<h1>Lemon. <span>Hub</span></h1>
+<h1>Lemon <span>Cord</span></h1>
 <p>Your Minecraft customization center.</p>
 </header>
 
 <div class="hub-grid">
-
 <a href="totem-maker.html" class="hub-card nav-link">
-<div class="icon">
-<i class="fas fa-wand-magic-sparkles"></i>
-</div>
+<div class="icon"><i class="fas fa-wand-magic-sparkles"></i></div>
 <h2>Totem Creator</h2>
 <p>Create animated custom totems from any GIF in seconds.</p>
 </a>
-
 </div>
 </div>
 
@@ -199,7 +191,6 @@ transform:translateY(-5px);
 <a href="https://www.tiktok.com/@lemonadefor_you?_r=1&_t=ZS-93hJaVt9xDd" target="_blank" class="social-icon">
 <i class="fab fa-tiktok"></i>
 </a>
-
 <a href="https://discord.gg/PE4vGcZ3vY" class="social-icon">
 <i class="fab fa-discord"></i>
 </a>
@@ -207,18 +198,12 @@ transform:translateY(-5px);
 
 <script>
 const pageTransition=document.getElementById("pageTransition");
-
-window.addEventListener("load",()=>{
-pageTransition.classList.add("animate-in");
-});
-
+window.addEventListener("load",()=>{pageTransition.classList.add("animate-in");});
 document.querySelectorAll(".nav-link").forEach(link=>{
 link.addEventListener("click",e=>{
 e.preventDefault();
 pageTransition.classList.add("animate-out");
-setTimeout(()=>{
-window.location.href=link.href;
-},500);
+setTimeout(()=>{window.location.href=link.href;},500);
 });
 });
 </script>
